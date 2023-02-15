@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/aidan/CLionProjects/untitled3
+# Install script for directory: C:/Users/iLigh/OneDrive/Documents/School/Data Structures and Algorithms/Assignments/Gradebook-Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/untitled3")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Gradebook-Project")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/aidan/CLionProjects/untitled3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/iLigh/OneDrive/Documents/School/Data Structures and Algorithms/Assignments/Gradebook-Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
