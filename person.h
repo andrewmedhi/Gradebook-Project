@@ -7,7 +7,6 @@ private:
 
 public:
     // Constructors
-    Person();
     Person(std::string name);
 
     // Get name
