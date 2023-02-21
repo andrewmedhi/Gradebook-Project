@@ -6,7 +6,7 @@ int main() {
     std::cout << "Take it EZ BABY" << std::endl;
     std::cout << "I live inside The matrix *>" << std::endl;
     Deliverable weed ("Dagoth_Ur", 20, 5,'L' );
-    std::cout<< weed.GetName();
+    std::cout << weed.GetName() << std::endl;
     std::cout << "I live inside The matrix 8>" << std::endl;
     std::cout << "HI" << std::endl;
     std::cout << "lol" << std::endl;
