@@ -11,7 +11,7 @@ public:
     std::string GetName()
     int GetPW()
     int GetPE()
-    char GetAss()
+    char GetType()
 
 /*
 That looks like a sad face.

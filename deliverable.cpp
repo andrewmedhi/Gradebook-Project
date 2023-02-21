@@ -19,6 +19,6 @@ int Deliverable::GetPW(){
 int Deliverable::GetPE(){
     return this->points_Earned;
 }
-char Deliverable::GetAss(){
+char Deliverable::Gettype(){
     return this->assType;
 }
