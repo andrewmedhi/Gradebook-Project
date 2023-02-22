@@ -9,6 +9,12 @@ Grade::Grade(std::string student_name, std::string student_class){
     this->Current_Grade=100;
     this->Points_Earned=0;
     this->Points_Potential=0;
+    //i thought it would be a good idea to set the area size to 4 rows
+    //row 1: Labs
+    //row 2: Assignments
+    //row 3: Projects
+    //row 4: Exams
+
     for(int i=0;i<4;i++){
         this->Assignment_List.push_back({});
     }
