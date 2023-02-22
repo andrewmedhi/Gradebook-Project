@@ -1,0 +1,3 @@
+C:/Users/iLigh/OneDrive/Documents/School/Data Structures and Algorithms/Assignments/Gradebook-Project/cmake-build-debug/CMakeFiles/Gradebook-Project.dir
+C:/Users/iLigh/OneDrive/Documents/School/Data Structures and Algorithms/Assignments/Gradebook-Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/iLigh/OneDrive/Documents/School/Data Structures and Algorithms/Assignments/Gradebook-Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
