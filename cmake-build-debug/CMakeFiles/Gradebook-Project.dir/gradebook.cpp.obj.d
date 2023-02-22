@@ -1,7 +1,7 @@
 CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj: \
- C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\gradebook.cpp \
- C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\gradebook.h \
- C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\person.h \
+ C:\Users\aidan\CLionProjects\Gradebook-Project\gradebook.cpp \
+ C:\Users\aidan\CLionProjects\Gradebook-Project\gradebook.h \
+ C:\Users\aidan\CLionProjects\Gradebook-Project\person.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/string \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -137,4 +137,4 @@ CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
- C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\deliverable.h
+ C:\Users\aidan\CLionProjects\Gradebook-Project\deliverable.h
