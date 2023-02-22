@@ -33,22 +33,32 @@ float Grade::getGrade(){
 }
 
 int Grade::getAss(char type, std::string assName) {
-    int idx=0;
+    int idx1=0;
+    //find which row it's in
     switch(type){
         case 'L':
-            idx=0;
+            idx1=0;
             break;
         case 'A':
-            idx=1;
+            idx1=1;
             break;
         case 'P':
-            idx=2;
+            idx1=2;
             break;
         case 'E':
-            idx=3;
+            idx1=3;
             break;
     }
-    return 1;
+    //find where in the row it is in
+    int idx2 = 0;
+    while (idx2 < this->Assignment_List[idx1].size()) {
+        if (this->Assignment_List[idx1][idx2].GetName()==assName) {
+            break;
+        }
+        idx2 += 1;
+    }
+    //return the assignment at the row and idx2 name
+    return this->Assignment_List[idx1][idx2].GetPE();
 }
 
 void Grade::addAss(Deliverable assignment){
