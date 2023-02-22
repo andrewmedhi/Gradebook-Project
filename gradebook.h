@@ -1,5 +1,5 @@
-#import "person.h"
-#import "deliverable.h"
+#include "person.h"
+#include "deliverable.h"
 
 class Gradebook{
 
