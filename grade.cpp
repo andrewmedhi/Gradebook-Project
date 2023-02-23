@@ -1,83 +1,97 @@
 #include "grade.h"
 #include <iostream>
+#include <utility>
 
-Grade::Grade(std::string student_name, std::string student_class){
-    this->StudentName=student_name;
-    this->Student_Class=student_class;
+// constructor, className is only needed, everything else will be filled at runtime
+Grade::Grade(std::string className) {
+    this->className = std::move(className);
 
-    this->Student=new Person(this->StudentName);
-    this->Current_Grade=100;
-    this->Points_Earned=0;
-    this->Points_Potential=0;
-    //i thought it would be a good idea to set the area size to 4 rows
-    //row 1: Labs
-    //row 2: Assignments
-    //row 3: Projects
-    //row 4: Exams
-
-    for(int i=0;i<4;i++){
-        this->Assignment_List.push_back({});
-    }
 }
 
-std::string Grade::getName() {
-    return this->StudentName;
-}
+//push deliverable into the assignment list
+void Grade::push_deliverable(std::string name, std::string type, int pt, int pe) {
 
-std::string Grade::getClass(){
-    return this->Student_Class;
-}
+    Deliverable tempDeliverable(std::move(name), type, pt, pe);
 
-float Grade::getGrade(){
-    return this->Current_Grade;
-}
+    bool successfulPlacement = false;
 
-int Grade::getAss(char type, std::string assName) {
-    int idx1=0;
-    //find which row it's in
-    switch(type){
-        case 'L':
-            idx1=0;
-            break;
-        case 'A':
-            idx1=1;
-            break;
-        case 'P':
-            idx1=2;
-            break;
-        case 'E':
-            idx1=3;
-            break;
-    }
-    //find where in the row it is in
-    int idx2 = 0;
-    while (idx2 < this->Assignment_List[idx1].size()) {
-        if (this->Assignment_List[idx1][idx2].GetName()==assName) {
-            break;
+    for(auto & i : deliverableList){ // i is sub list inside of deliverableList
+        if(i.at(0).getType() == type){ // if first position in list matches the list, add it
+            i.push_back(tempDeliverable);
+            std::cout << name << " added to " << type << std::endl;
+            successfulPlacement = true; // successful placement, don't create new category
         }
-        idx2 += 1;
     }
-    //return the assignment at the row and idx2 name
-    return this->Assignment_List[idx1][idx2].GetPE();
+
+    if(!successfulPlacement){ // create new category
+        this->deliverableList.push_back(*new std::vector<Deliverable>); // add new category to bottom
+        this->deliverableList.at(deliverableList.size()-1).push_back(tempDeliverable); // bottom category has to be new one, push deliverable to it
+        std::cout << "created category " << type << " and added " << name << "to it" << std::endl;
+    }
+
 }
 
-void Grade::addAss(Deliverable assignment){
-    switch(assignment.GetType()){
-        case 'L':
-            this->Assignment_List[0].push_back(assignment);
-            break;
-        case 'A':
-            this->Assignment_List[1].push_back(assignment);
-            break;
-        case 'P':
-            this->Assignment_List[2].push_back(assignment);
-            break;
-        case 'E':
-            this->Assignment_List[3].push_back(assignment);
-            break;
+
+void Grade::pop_deliverable(std::string name, std::string type) {
+
+    bool successfulRemoval = false;
+
+    for(auto & i : deliverableList){ // i is sub list inside of deliverableList
+        if(i.at(0).getType() == type){ // search for the category
+            for(int x = 0; x < i.size(); x++){
+                if(i.at(x).getName() == name){
+                    i.erase(i.begin() + x);
+                    successfulRemoval = true;
+                }
+            }
+        }
     }
 
-    this->Points_Earned+=assignment.GetPE();
-    this->Points_Potential+=assignment.GetPW();
-    this->Current_Grade=this->Points_Earned/this->Points_Potential*1.0;
+    if(!successfulRemoval){
+        std::cout << "deliverable does not exist" << std::endl;
+    } else {
+        std::cout << name << " removed from " << type << std::endl;
+    }
+
+}
+
+void Grade::pop_category(std::string type) {
+
+    bool successfulRemoval = false;
+
+    for(int i = 0; i < deliverableList.size(); i++){ // i is sub list inside of deliverableList
+        if(deliverableList.at(i).at(0).getType() == type){ // search for the category
+            deliverableList.erase(deliverableList.begin() + i);
+            successfulRemoval = true;
+        }
+    }
+
+    if(!successfulRemoval){
+        std::cout << "category does not exist" << std::endl;
+    } else {
+        std::cout << type << " category removed" << std::endl;
+    }
+
+}
+
+// GETTERS & SETTERS
+
+std::string Grade::getClassName() {
+    return this->className;
+}
+
+// get a list of all the assignments under a certain type
+// returns an empty list if not found
+std::vector<Deliverable> Grade::getDeliverablesType(std::string type) {
+
+    for(auto & i : deliverableList){
+        if(i.at(0).getName() == type){
+            return i;
+        }
+    }
+
+    std::vector<Deliverable> empty;
+
+    return empty;
+
 }

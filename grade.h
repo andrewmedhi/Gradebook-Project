@@ -1,24 +1,24 @@
 #include <string>
 #include <vector>
-#include "person.h"
 #include "deliverable.h"
 
 class Grade{
 private:
-    std::string StudentName;
-    Person* Student;
-    int Points_Potential;
-    int Points_Earned;
-    std::string Student_Class;
-    float Current_Grade; //current grade
-    std::vector<std::vector<Deliverable>> Assignment_List;
+    std::string className;
+    std::vector<std::vector<Deliverable>> deliverableList;
+
 public:
-    Grade(std::string student_name, std::string student_class);
-    std::string getName();
-    std::string getClass();
-    float getGrade();
-    int getAss(char type, std::string assName);
-    void addAss(Deliverable assignment);
+
+    Grade(std::string className); // constructor
+
+    void push_deliverable(std::string name, std::string type, int pt, int pe);
+    void pop_deliverable(std::string name, std::string type);
+    void pop_category(std::string type);
+
+    // getters & setters
+    std::string getClassName();
+    std::vector<Deliverable> getDeliverablesType(std::string type);
+
 
 
 

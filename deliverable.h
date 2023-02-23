@@ -1,25 +1,21 @@
 #include <string>
 class Deliverable {
 private:
-    std::string name;
-    int points_Worth;
-    int points_Earned;
-    char assType;
+    std::string name; // assignment name
+    int pointTotal; // total points (ex. the 100 in 85/100)
+    int pointEarned; // total points earned (ex. the 85 in 85/100)
+    std::string type; // assigment type (ex. lab, homework, etc.)
 
 
 public:
-    Deliverable(std::string name, int points_Worth, int points_Earned, char assType);
-    std::string GetName();
-    int GetPW();
-    int GetPE();
-    char GetType();
+    Deliverable(std::string name, std::string type, int pw, int pe); // constructor
 
-/*
-That looks like a sad face.
-|
-v
 
-*/
+    // getters & setters
+    std::string getName();
+    int getPointsWorth();
+    int getPointsEarned();
+    std::string getType();
 
 };
 

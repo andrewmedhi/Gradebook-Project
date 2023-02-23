@@ -1,24 +1,30 @@
 #include "deliverable.h"
 #include <iostream>
+#include <utility>
 
-Deliverable::Deliverable(std::string name, int points_Worth, int points_Earned, char AssType) {
-    this->name = name;
-    this->points_Worth = points_Worth;
-    this->points_Earned = points_Earned;
-    this->assType = AssType;
+Deliverable::Deliverable(std::string name, std::string type, int pw, int pe) {
+    this->name = std::move(name);
+    this->pointTotal = pw;
+    this->pointEarned = pe;
+    this->type = std::move(type);
 
 
 }
 
-std::string Deliverable::GetName(){
+// GETTERS & SETTERS
+
+std::string Deliverable::getName(){
     return this->name;
 }
-int Deliverable::GetPW(){
-    return this->points_Worth;
+
+int Deliverable::getPointsWorth() {
+    return this->pointTotal;
 }
-int Deliverable::GetPE(){
-    return this->points_Earned;
+
+int Deliverable::getPointsEarned() {
+    return this->pointEarned;
 }
-char Deliverable::GetType(){
-    return this->assType;
+
+std::string Deliverable::getType(){
+    return this->type;
 }
