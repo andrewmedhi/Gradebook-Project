@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\aidan\CLionProjects\Gradebook-Project
+CMAKE_SOURCE_DIR = "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Gradebook-Project.dir/depend.make
@@ -69,74 +69,74 @@ include CMakeFiles/Gradebook-Project.dir/progress.make
 include CMakeFiles/Gradebook-Project.dir/flags.make
 
 CMakeFiles/Gradebook-Project.dir/main.cpp.obj: CMakeFiles/Gradebook-Project.dir/flags.make
-CMakeFiles/Gradebook-Project.dir/main.cpp.obj: C:/Users/aidan/CLionProjects/Gradebook-Project/main.cpp
+CMakeFiles/Gradebook-Project.dir/main.cpp.obj: C:/Users/iLigh/OneDrive/Documents/School/Data\ Structures\ and\ Algorithms/Assignments/Gradebook-Project/main.cpp
 CMakeFiles/Gradebook-Project.dir/main.cpp.obj: CMakeFiles/Gradebook-Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Gradebook-Project.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/main.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\main.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\main.cpp.obj -c C:\Users\aidan\CLionProjects\Gradebook-Project\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Gradebook-Project.dir/main.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/main.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\main.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\main.cpp.obj -c "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\main.cpp"
 
 CMakeFiles/Gradebook-Project.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gradebook-Project.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aidan\CLionProjects\Gradebook-Project\main.cpp > CMakeFiles\Gradebook-Project.dir\main.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\main.cpp" > CMakeFiles\Gradebook-Project.dir\main.cpp.i
 
 CMakeFiles/Gradebook-Project.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gradebook-Project.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aidan\CLionProjects\Gradebook-Project\main.cpp -o CMakeFiles\Gradebook-Project.dir\main.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\main.cpp" -o CMakeFiles\Gradebook-Project.dir\main.cpp.s
 
 CMakeFiles/Gradebook-Project.dir/deliverable.cpp.obj: CMakeFiles/Gradebook-Project.dir/flags.make
-CMakeFiles/Gradebook-Project.dir/deliverable.cpp.obj: C:/Users/aidan/CLionProjects/Gradebook-Project/deliverable.cpp
+CMakeFiles/Gradebook-Project.dir/deliverable.cpp.obj: C:/Users/iLigh/OneDrive/Documents/School/Data\ Structures\ and\ Algorithms/Assignments/Gradebook-Project/deliverable.cpp
 CMakeFiles/Gradebook-Project.dir/deliverable.cpp.obj: CMakeFiles/Gradebook-Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Gradebook-Project.dir/deliverable.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/deliverable.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\deliverable.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\deliverable.cpp.obj -c C:\Users\aidan\CLionProjects\Gradebook-Project\deliverable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Gradebook-Project.dir/deliverable.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/deliverable.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\deliverable.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\deliverable.cpp.obj -c "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\deliverable.cpp"
 
 CMakeFiles/Gradebook-Project.dir/deliverable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gradebook-Project.dir/deliverable.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aidan\CLionProjects\Gradebook-Project\deliverable.cpp > CMakeFiles\Gradebook-Project.dir\deliverable.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\deliverable.cpp" > CMakeFiles\Gradebook-Project.dir\deliverable.cpp.i
 
 CMakeFiles/Gradebook-Project.dir/deliverable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gradebook-Project.dir/deliverable.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aidan\CLionProjects\Gradebook-Project\deliverable.cpp -o CMakeFiles\Gradebook-Project.dir\deliverable.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\deliverable.cpp" -o CMakeFiles\Gradebook-Project.dir\deliverable.cpp.s
 
 CMakeFiles/Gradebook-Project.dir/grade.cpp.obj: CMakeFiles/Gradebook-Project.dir/flags.make
-CMakeFiles/Gradebook-Project.dir/grade.cpp.obj: C:/Users/aidan/CLionProjects/Gradebook-Project/grade.cpp
+CMakeFiles/Gradebook-Project.dir/grade.cpp.obj: C:/Users/iLigh/OneDrive/Documents/School/Data\ Structures\ and\ Algorithms/Assignments/Gradebook-Project/grade.cpp
 CMakeFiles/Gradebook-Project.dir/grade.cpp.obj: CMakeFiles/Gradebook-Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Gradebook-Project.dir/grade.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/grade.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\grade.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\grade.cpp.obj -c C:\Users\aidan\CLionProjects\Gradebook-Project\grade.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Gradebook-Project.dir/grade.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/grade.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\grade.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\grade.cpp.obj -c "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\grade.cpp"
 
 CMakeFiles/Gradebook-Project.dir/grade.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gradebook-Project.dir/grade.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aidan\CLionProjects\Gradebook-Project\grade.cpp > CMakeFiles\Gradebook-Project.dir\grade.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\grade.cpp" > CMakeFiles\Gradebook-Project.dir\grade.cpp.i
 
 CMakeFiles/Gradebook-Project.dir/grade.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gradebook-Project.dir/grade.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aidan\CLionProjects\Gradebook-Project\grade.cpp -o CMakeFiles\Gradebook-Project.dir\grade.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\grade.cpp" -o CMakeFiles\Gradebook-Project.dir\grade.cpp.s
 
 CMakeFiles/Gradebook-Project.dir/person.cpp.obj: CMakeFiles/Gradebook-Project.dir/flags.make
-CMakeFiles/Gradebook-Project.dir/person.cpp.obj: C:/Users/aidan/CLionProjects/Gradebook-Project/person.cpp
+CMakeFiles/Gradebook-Project.dir/person.cpp.obj: C:/Users/iLigh/OneDrive/Documents/School/Data\ Structures\ and\ Algorithms/Assignments/Gradebook-Project/person.cpp
 CMakeFiles/Gradebook-Project.dir/person.cpp.obj: CMakeFiles/Gradebook-Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Gradebook-Project.dir/person.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/person.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\person.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\person.cpp.obj -c C:\Users\aidan\CLionProjects\Gradebook-Project\person.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Gradebook-Project.dir/person.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/person.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\person.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\person.cpp.obj -c "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\person.cpp"
 
 CMakeFiles/Gradebook-Project.dir/person.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gradebook-Project.dir/person.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aidan\CLionProjects\Gradebook-Project\person.cpp > CMakeFiles\Gradebook-Project.dir\person.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\person.cpp" > CMakeFiles\Gradebook-Project.dir\person.cpp.i
 
 CMakeFiles/Gradebook-Project.dir/person.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gradebook-Project.dir/person.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aidan\CLionProjects\Gradebook-Project\person.cpp -o CMakeFiles\Gradebook-Project.dir\person.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\person.cpp" -o CMakeFiles\Gradebook-Project.dir\person.cpp.s
 
 CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj: CMakeFiles/Gradebook-Project.dir/flags.make
-CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj: C:/Users/aidan/CLionProjects/Gradebook-Project/gradebook.cpp
+CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj: C:/Users/iLigh/OneDrive/Documents/School/Data\ Structures\ and\ Algorithms/Assignments/Gradebook-Project/gradebook.cpp
 CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj: CMakeFiles/Gradebook-Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\gradebook.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\gradebook.cpp.obj -c C:\Users\aidan\CLionProjects\Gradebook-Project\gradebook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gradebook-Project.dir/gradebook.cpp.obj -MF CMakeFiles\Gradebook-Project.dir\gradebook.cpp.obj.d -o CMakeFiles\Gradebook-Project.dir\gradebook.cpp.obj -c "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\gradebook.cpp"
 
 CMakeFiles/Gradebook-Project.dir/gradebook.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gradebook-Project.dir/gradebook.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aidan\CLionProjects\Gradebook-Project\gradebook.cpp > CMakeFiles\Gradebook-Project.dir\gradebook.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\gradebook.cpp" > CMakeFiles\Gradebook-Project.dir\gradebook.cpp.i
 
 CMakeFiles/Gradebook-Project.dir/gradebook.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gradebook-Project.dir/gradebook.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aidan\CLionProjects\Gradebook-Project\gradebook.cpp -o CMakeFiles\Gradebook-Project.dir\gradebook.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\gradebook.cpp" -o CMakeFiles\Gradebook-Project.dir\gradebook.cpp.s
 
 # Object files for target Gradebook-Project
 Gradebook__Project_OBJECTS = \
@@ -158,7 +158,7 @@ Gradebook-Project.exe: CMakeFiles/Gradebook-Project.dir/build.make
 Gradebook-Project.exe: CMakeFiles/Gradebook-Project.dir/linklibs.rsp
 Gradebook-Project.exe: CMakeFiles/Gradebook-Project.dir/objects1.rsp
 Gradebook-Project.exe: CMakeFiles/Gradebook-Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Gradebook-Project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Gradebook-Project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Gradebook-Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -170,6 +170,6 @@ CMakeFiles/Gradebook-Project.dir/clean:
 .PHONY : CMakeFiles/Gradebook-Project.dir/clean
 
 CMakeFiles/Gradebook-Project.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\aidan\CLionProjects\Gradebook-Project C:\Users\aidan\CLionProjects\Gradebook-Project C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug C:\Users\aidan\CLionProjects\Gradebook-Project\cmake-build-debug\CMakeFiles\Gradebook-Project.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project" "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project" "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug" "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug" "C:\Users\iLigh\OneDrive\Documents\School\Data Structures and Algorithms\Assignments\Gradebook-Project\cmake-build-debug\CMakeFiles\Gradebook-Project.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Gradebook-Project.dir/depend
 

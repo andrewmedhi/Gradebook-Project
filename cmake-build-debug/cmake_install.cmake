@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/aidan/CLionProjects/Gradebook-Project
+# Install script for directory: C:/Users/iLigh/OneDrive/Documents/School/Data Structures and Algorithms/Assignments/Gradebook-Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/aidan/CLionProjects/Gradebook-Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/iLigh/OneDrive/Documents/School/Data Structures and Algorithms/Assignments/Gradebook-Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
