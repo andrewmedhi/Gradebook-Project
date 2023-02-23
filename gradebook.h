@@ -14,6 +14,7 @@ public:
     void readFile();
 
     Person getStudent(std::string Name);
+    int getStudentSize();
     std::vector<Person> getStudentList();
 
 
