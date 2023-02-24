@@ -33,19 +33,26 @@ Gradebook::Gradebook() {
         }
     }
 
-    // Ask for file name
-    std::string fileName;
-    std::cout << "Enter file: ";
-    std::cin >> fileName;
-
     // File creation
     if (importFile) { // LOAD DATA FROM FILE
         //DEBUG
         //Person* currentStudent;
         //DEBUG
+        // Ask for file name
+        std::string fileName;
+        std::cout << "Enter file: ";
+        std::cin >> fileName;
+
         std::fstream readfile(fileName);
         std::string line;
         std::string currentstudent;
+        // Ensure a valid file name
+        while (not (readfile.is_open())){
+            std::cout << "Could not open file. Please try again. "<< std::endl;
+            std::cout << "Enter file: ";
+            std::cin >> fileName;
+        }
+
         while (getline(readfile, line)) {
             std::string s;
             std::istringstream ss(line);
@@ -93,7 +100,7 @@ Gradebook::Gradebook() {
         //will ask user to enter a student's name until they enter %
         std::cout << "Please Enter Student Name (Enter '%' To Quit):\n";
         //std::cin.ignore();
-        std::getline(std::cin, input);
+        std::cin >> input;
         while (input != "%") {
             std::string currentstudent = input;
             this->push_student(currentstudent);
@@ -102,7 +109,7 @@ Gradebook::Gradebook() {
             createfile << currentstudent << std::endl;
             std::string input2;
             std::cout << "Please Enter A Grade In Format:\nName,Points Earned,Points Worth,Type\n(Enter '%' To Quit):\n";
-            std::getline(std::cin, input2);
+            std::cin >> input2;
             //will ask user to enter a deliverable written in format: Name,Points_earned,Points_worth,Type
             while (input2 != "%") {
                 //splits string by space, then adds each item in string into list
@@ -124,10 +131,12 @@ Gradebook::Gradebook() {
                 //whatever code is needed to add this deliverable to last person in student list
                 //students.at(student.size()-1).addDeliverable(tempDeliverable);
                 std::cout << "Please Enter A Grade In Format:\nName,Points Earned,Points Worth,Type\n(Enter '%' To Quit):\n";
-                std::getline(std::cin, input2);
+                std::cin >> input2;
+
             }
             std::cout << "Please Enter Student Name (Enter '%' To Quit):\n";
-            std::getline(std::cin, input);
+            std::cin >> input;
+
         }
         createfile.close();
         /*
