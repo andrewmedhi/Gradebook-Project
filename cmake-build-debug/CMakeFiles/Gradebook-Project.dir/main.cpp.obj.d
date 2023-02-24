@@ -1,5 +1,5 @@
 CMakeFiles/Gradebook-Project.dir/main.cpp.obj: \
- C:\Users\aidan\CLionProjects\Gradebook-Project\main.cpp \
+ C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\main.cpp \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -135,12 +135,12 @@ CMakeFiles/Gradebook-Project.dir/main.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
- C:\Users\aidan\CLionProjects\Gradebook-Project\gradebook.h \
- C:\Users\aidan\CLionProjects\Gradebook-Project\person.h \
+ C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\gradebook.h \
+ C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\person.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
- C:\Users\aidan\CLionProjects\Gradebook-Project\grade.h \
- C:\Users\aidan\CLionProjects\Gradebook-Project\deliverable.h
+ C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\grade.h \
+ C:\Users\iLigh\OneDrive\Documents\School\Data\ Structures\ and\ Algorithms\Assignments\Gradebook-Project\deliverable.h

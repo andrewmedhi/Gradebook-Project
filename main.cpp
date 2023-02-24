@@ -7,7 +7,7 @@ int main() {
     // User Input
     std::string input = "0";
     while(input != "-1"){
-        std::cout << "--- GRADEBOOK ---" << std::endl;
+        std::cout << "\n--- GRADEBOOK ---" << std::endl;
         std::cout << "1 - View Data" << std::endl;
         std::cout << "2 - Edit Data" << std::endl;
         std::cout << "-1 - Quit" << std::endl;
@@ -20,7 +20,7 @@ int main() {
             std::string viewInput = "0";
             while(viewInput != "-1"){
                 // View Menu
-                std::cout << "--- VIEW DATA ---" << std::endl;
+                std::cout << "\n--- VIEW DATA ---" << std::endl;
                 std::cout << "1 - View Entire Gradebook" << std::endl;
                 std::cout << "2 - View Specific Person" << std::endl;
                 std::cout << "-1 - Back" << std::endl;
@@ -67,21 +67,62 @@ int main() {
             std::string editInput = "0";
             while(editInput != "-1"){
                 // Menu
-                std::cout << "--- EDIT DATA ---" << std::endl;
+                std::cout << "\n--- EDIT DATA ---" << std::endl;
                 std::cout << "1 - Add Student to Gradebook" << std::endl;
                 std::cout << "2 - Remove Student from Gradebook" << std::endl;
                 std::cout << "3 - Add Student to Class" << std::endl;
                 std::cout << "4 - Remove Student from Class" << std::endl;
                 std::cout << "5 - Add New Deliverable" << std::endl;
                 std::cout << "6 - Remove a Deliverable" << std::endl;
+                std::cout << "-1 - Back" << std::endl;
+
 
                 // User Input
                 std::cout << "Option: ";
                 std::cin >> editInput;
 
                 // TODO: IF STATEMENTS
-                if (editInput == "1"){
+                if (editInput == "1" || editInput == "2"){ // Edit student list from Gradebook
+                    // Ask for name
+                    std::string name;
+                    std::cout << "Student Name: ";
+                    std::cin >> name;
 
+                    if (editInput == "1"){
+                        // Add student to Gradebook
+                        gradebook.push_student(name);
+                    } else{
+                        // Remove student from Gradebook
+                        gradebook.pop_student(name);
+                    }
+                } else if (editInput == "3" || editInput == "4"){ // Edit student list from classes
+                    // Ask for name
+                    std::string name;
+                    std::cout << "Student Name: ";
+                    std::cin >> name;
+
+                    // TODO
+                    if (editInput == "3"){
+                        // Add student to class
+
+                    } else{
+                        // Remove student from class
+
+                    }
+                } else if (editInput == "5" || editInput == "6"){ // Edit Deliverables
+                    // Ask for Deliverable name
+                    std::string name;
+                    std::cout << "Deliverable Name: ";
+                    std::cin >> name;
+
+                    // TODO
+                    if (editInput == "5"){
+                        // Add new Deliverable
+
+                    } else {
+                        // Remove Deliverable
+
+                    }
                 }
             }
 

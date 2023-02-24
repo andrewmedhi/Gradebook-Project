@@ -35,7 +35,7 @@ Gradebook::Gradebook() {
 
     // Ask for file name
     std::string fileName;
-    std::cout << "Type file name ";
+    std::cout << "Enter file: ";
     std::cin >> fileName;
 
     // File creation
@@ -153,9 +153,9 @@ void Gradebook::push_student(std::string studentName) {
     }
     if(studentFound){
         students.push_back(*new Person(std::move(studentName)));
-        std::cout << "created student " << studentName << std::endl;
+        std::cout << "Created student " << studentName << std::endl;
     } else {
-        std::cout << "student already exists" << std::endl;
+        std::cout << "Student already exists" << std::endl;
     }
 
 }
@@ -173,9 +173,9 @@ void Gradebook::pop_student(std::string studentName) {
     }
 
     if(studentFound){
-        std::cout << "deleted student " << studentName << std::endl;
+        std::cout << "Deleted student " << studentName << std::endl;
     } else {
-        std::cout << "student does not exist" << std::endl;
+        std::cout << "Student does not exist" << std::endl;
     }
 }
 
