@@ -39,7 +39,10 @@ Gradebook::Gradebook() {
     std::cin >> fileName;
 
     // File creation
-    if(importFile) { // LOAD DATA FROM FILE
+    if (importFile) { // LOAD DATA FROM FILE
+        //DEBUG
+        //Person* currentStudent;
+        //DEBUG
         std::fstream readfile(fileName);
         std::string line;
         std::string currentstudent;
@@ -47,27 +50,94 @@ Gradebook::Gradebook() {
             std::string s;
             std::istringstream ss(line);
             while (getline(ss, s)) {
+                //this if if we know it's a student
                 if (s.find('$') != std::string::npos) {
                     s.erase(remove(s.begin(), s.end(), '$'), s.end());
                     currentstudent = s;
                     this->push_student(s);
-                }else {
+                }
+                else {
                     //splits string by space, then adds each item in string into list
                     std::vector<std::string> deliver_list;
-                    while (getline(ss, s, ' ')) {
-                        deliver_list.push_back(s);
+                    std::istringstream tt(s);
+                    std::string t;
+                    //i decided it would be better to split the string by commas, since an assignment name could have a space
+                    while (getline(tt, t, ',')) {
+                        deliver_list.push_back(t);
                     }
                     std::string delivName = deliver_list[0];
-                    std::string delivPE = deliver_list[1];
-                    std::string delivPP = deliver_list[2];
+                    int delivPE = std::stoi(deliver_list[1]);
+                    int delivPP = std::stoi(deliver_list[2]);
                     std::string delivType = deliver_list[3];
-
+                    Deliverable* tempDeliverable = new Deliverable(delivName,delivType,delivPP,delivPE);
+                    //whatever code is needed to add this deliverable to last person in student list
+                    //students.at(student.size()-1).addDeliverable(tempDeliverable);
                 }
             }
         }
+        /* Im Assuming the file to look something like this:
+        * $Andrew Medeiros
+        * Lab 4,15,20,L
+        * Assignment 2,30,50,A
+        * $Bill Mates
+        * Lab 3,12,20,L
+        */
         readfile.close();
-    }else {
+    }
+    else {
+        //you can change this later ---v
+        std::fstream createfile("output.txt");
 
+        std::string input;
+
+        //will ask user to enter a student's name until they enter %
+        std::cout << "Please Enter Student Name (Enter '%' To Quit):\n";
+        //std::cin.ignore();
+        std::getline(std::cin, input);
+        while (input != "%") {
+            std::string currentstudent = input;
+            this->push_student(currentstudent);
+            currentstudent.insert(0, 1, '$');
+
+            createfile << currentstudent << std::endl;
+            std::string input2;
+            std::cout << "Please Enter A Grade In Format:\nName,Points Earned,Points Worth,Type\n(Enter '%' To Quit):\n";
+            std::getline(std::cin, input2);
+            //will ask user to enter a deliverable written in format: Name,Points_earned,Points_worth,Type
+            while (input2 != "%") {
+                //splits string by space, then adds each item in string into list
+                std::vector<std::string> deliver_list;
+                std::istringstream ss(input2);
+                std::string s;
+                while (getline(ss, s, ',')) {
+                    deliver_list.push_back(s);
+                }
+                std::string delivName = deliver_list[0];
+                int delivPE = std::stoi(deliver_list[1]);
+                int delivPP = std::stoi(deliver_list[2]);
+                std::string delivType = deliver_list[3];
+                for (int i = 0; i < deliver_list.size() - 1; i++) {
+                    createfile << deliver_list[i] << ',';
+                }
+                createfile << deliver_list[3] << std::endl;
+                Deliverable* tempDeliverable = new Deliverable(delivName, delivType, delivPP, delivPE);
+                //whatever code is needed to add this deliverable to last person in student list
+                //students.at(student.size()-1).addDeliverable(tempDeliverable);
+                std::cout << "Please Enter A Grade In Format:\nName,Points Earned,Points Worth,Type\n(Enter '%' To Quit):\n";
+                std::getline(std::cin, input2);
+            }
+            std::cout << "Please Enter Student Name (Enter '%' To Quit):\n";
+            std::getline(std::cin, input);
+        }
+        createfile.close();
+        /*
+        * The output of the file will match how I assume an input file to look
+        * $Andrew Medeiros
+        * Lab 4,15,20,L
+        * Assignment 2,30,50,A
+        * $Bill Mates
+        * Lab 3,12,20,L
+        */
     }
 }
 
