@@ -1,0 +1,88 @@
+$Aidan Languedoc
+?CSC212
+Assignment 1,96,100,Assignments
+Assignment 2,74,100,Assignments
+Assignment 3,83,100,Assignments
+Assignment 4,98,100,Assignments
+Assignment 5,71,100,Assignments
+Final Exam,94,100,Final Exam
+Term Project,339,350,Project
+MEC Project P1 (Bonus),1,1,Project
+MEC Project P2 (Bonus),0,1,Project
+C++ Crash Course,5,5,Lab
+Function Runtime Timing,5,5,Lab
+Linked Lists,5,5,Lab
+Priority Queues!,5,5,Lab
+Backtracking,5,5,Lab
+Lab = (Lab + Recursion(4)),5,5,Lab
+Binary Search Trees,5,5,Lab
+Balancing Act,5,5,Lab
+Hash Tables,1,5,Lab
+Sets & Maps,3,5,Lab
+Graphs,0,5,Lab
+$Annie Liang
+?CSC212
+Assignment 1,96,100,Assignments
+Assignment 2,-1,100,Assignments
+Assignment 3,-1,100,Assignments
+Assignment 4,-1,100,Assignments
+Assignment 5,-1,100,Assignments
+Final Exam,-1,100,Final Exam
+Term Project,-1,350,Project
+MEC Project P1 (Bonus),-1,1,Project
+MEC Project P2 (Bonus),-1,1,Project
+C++ Crash Course,5,5,Lab
+Function Runtime Timing,5,5,Lab
+Linked Lists,5,5,Lab
+Priority Queues!,5,5,Lab
+Backtracking,-1,5,Lab
+Lab = (Lab + Recursion(4)),-1,5,Lab
+Binary Search Trees,-1,5,Lab
+Balancing Act,-1,5,Lab
+Hash Tables,-1,5,Lab
+Sets & Maps,-1,5,Lab
+Graphs,-1,5,Lab
+$Alex Cote
+?CSC212
+Assignment 1,95,100,Assignments
+Assignment 2,99,100,Assignments
+Assignment 3,73,100,Assignments
+Assignment 4,-1,100,Assignments
+Assignment 5,-1,100,Assignments
+Final Exam,93,100,Final Exam
+Term Project,349,350,Project
+MEC Project P1 (Bonus),-1,1,Project
+MEC Project P2 (Bonus),-1,1,Project
+C++ Crash Course,5,5,Lab
+Function Runtime Timing,5,5,Lab
+Linked Lists,5,5,Lab
+Priority Queues!,5,5,Lab
+Backtracking,0,5,Lab
+Lab = (Lab + Recursion(4)),0,5,Lab
+Binary Search Trees,0,5,Lab
+Balancing Act,3,5,Lab
+Hash Tables,5,5,Lab
+Sets & Maps,5,5,Lab
+Graphs,5,5,Lab
+$Andrew Medhi
+?CSC212
+Assignment 1,85,100,Assignments
+Assignment 2,100,100,Assignments
+Assignment 3,100,100,Assignments
+Assignment 4,93,100,Assignments
+Assignment 5,-1,100,Assignments
+Final Exam,99,100,Final Exam
+Term Project,332,350,Project
+MEC Project P1 (Bonus),1,1,Project
+MEC Project P2 (Bonus),1,1,Project
+C++ Crash Course,5,5,Lab
+Function Runtime Timing,5,5,Lab
+Linked Lists,5,5,Lab
+Priority Queues!,5,5,Lab
+Backtracking,5,5,Lab
+Lab = (Lab + Recursion(4)),5,5,Lab
+Binary Search Trees,5,5,Lab
+Balancing Act,5,5,Lab
+Hash Tables,5,5,Lab
+Sets & Maps,5,5,Lab
+Graphs,5,5,Lab
