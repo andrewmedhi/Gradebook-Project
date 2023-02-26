@@ -1,0 +1,48 @@
+$Aidan Languedoc
+?CSC212
+Assignment 1,96,100,Assignments
+Assignment 2,74,100,Assignments
+Assignment 3,83,100,Assignments
+Assignment 4,98,100,Assignments
+Assignment 5,71,100,Assignments
+Final Exam,94,100,Final Exam
+Term Project,339,350,Project
+MEC Project P1 (Bonus),1,1,Project
+MEC Project P2 (Bonus),0,1,Project
+C++ Crash Course,5,5,Lab
+Function Runtime Timing,5,5,Lab
+Linked Lists,5,5,Lab
+Priority Queues!,5,5,Lab
+Backtracking,5,5,Lab
+Lab = (Lab + Recursion(4)),5,5,Lab
+Binary Search Trees,5,5,Lab
+Balancing Act,5,5,Lab
+Hash Tables,1,5,Lab
+Sets & Maps,3,5,Lab
+Graphs,0,5,Lab
+?GEO103
+HW-1,4,4,In-class and Homework Assignments
+D1: A Memorable Geology Event,4,4,In-class and Homework Assignments
+LT: How the greenhouse effect works,4,4,In-class and Homework Assignments
+D2: Geoengineering reading questions,4,4,In-class and Homework Assignments
+Guided Reading,10,10,Paper Project
+Annotated Bibliography,9,12,Paper Project
+Final Paper,-1,100,Paper Project
+Peer Reviews,-1,10,Paper Project
+Reflection,-1,10,Paper Project
+APA Activity,10,10,Paper Project
+Midterm Exam 1,93,100,Exams
+Midterm Exam 2,-1,100,Exams
+Final Exam,-1,100,Exams
+Laboratory Grade,-1,100,Laboratory
+?COM100
+Chapter 1: Communication A First Look,100,100,Connect Assignments
+Chapter 9: Communicating in Small Groups,100,100,Connect Assignments
+Chapter 10: Decision Making and Leadership in Small Groups,100,100,Connect Assignments
+Syllabus Quiz,90,100,Quiz
+Intro Prop Speech 2023,100,100,Quiz
+?MTH110
+Quiz 1,31,40,Quizzes
+Quiz 2,35,40,Quizzes
+WeBWork,-1,500,WeBWork
+Exam 1,-1,100,Semester Exams

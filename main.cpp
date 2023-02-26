@@ -19,8 +19,10 @@ void viewAllGrades(Gradebook *gradebook){
             double earnedGradePoints = 0;
             for(const auto& deliList : *grade.getDeliverableList()) {
                 for (auto tempDev: deliList) {
-                    totalGradePoints += tempDev.getPointsTotal();
-                    earnedGradePoints += tempDev.getPointsEarned();
+                    if(tempDev.getPointsEarned() != -1) {
+                        totalGradePoints += tempDev.getPointsTotal();
+                        earnedGradePoints += tempDev.getPointsEarned();
+                    }
                 }
             }
 
@@ -31,14 +33,20 @@ void viewAllGrades(Gradebook *gradebook){
                 double earnedPoints = 0;
 
                 for(auto tempDev : deliList){
-                    totalPoints += tempDev.getPointsTotal();
-                    earnedPoints += tempDev.getPointsEarned();
+                    if(tempDev.getPointsEarned() != -1) {
+                        totalPoints += tempDev.getPointsTotal();
+                        earnedPoints += tempDev.getPointsEarned();
+                    }
                 }
 
                 std::cout << std::fixed << std::setprecision(2) << "\t\t" << deliList.at(0).getType() << " --- " << earnedPoints/totalPoints*100 << "%" << std::endl;
 
                 for(auto tempDev : deliList){
-                    std::cout << std::fixed << std::setprecision(2) << "\t\t" << tempDev.getName() << " " << tempDev.getPointsEarned() << "/" << tempDev.getPointsTotal() << " - " << (double(tempDev.getPointsEarned())/double(tempDev.getPointsTotal()))*100 << "%" << std::endl;
+                    if(tempDev.getPointsEarned() != -1){
+                        std::cout << std::fixed << std::setprecision(2) << "\t\t" << tempDev.getName() << " " << tempDev.getPointsEarned() << "/" << tempDev.getPointsTotal() << " - " << (double(tempDev.getPointsEarned())/double(tempDev.getPointsTotal()))*100 << "%" << std::endl;
+                    } else {
+                        std::cout << std::fixed << std::setprecision(2) << "\t\t" << tempDev.getName() << " -/" << tempDev.getPointsTotal() << " - -%" << std::endl;
+                    }
                 }
 
             }
@@ -82,10 +90,12 @@ void viewIndividual(Gradebook *gradebook){
 
             double totalGradePoints = 0;
             double earnedGradePoints = 0;
-            for(auto deliList : *grade.getDeliverableList()) {
+            for(const auto& deliList : *grade.getDeliverableList()) {
                 for (auto tempDev: deliList) {
-                    totalGradePoints += tempDev.getPointsTotal();
-                    earnedGradePoints += tempDev.getPointsEarned();
+                    if(tempDev.getPointsEarned() != -1) {
+                        totalGradePoints += tempDev.getPointsTotal();
+                        earnedGradePoints += tempDev.getPointsEarned();
+                    }
                 }
             }
 
@@ -96,14 +106,20 @@ void viewIndividual(Gradebook *gradebook){
                 double earnedPoints = 0;
 
                 for(auto tempDev : deliList){
-                    totalPoints += tempDev.getPointsTotal();
-                    earnedPoints += tempDev.getPointsEarned();
+                    if(tempDev.getPointsEarned() != -1) {
+                        totalPoints += tempDev.getPointsTotal();
+                        earnedPoints += tempDev.getPointsEarned();
+                    }
                 }
 
                 std::cout << std::fixed << std::setprecision(2) << "\t\t" << deliList.at(0).getType() << " --- " << earnedPoints/totalPoints*100 << "%" << std::endl;
 
                 for(auto tempDev : deliList){
-                    std::cout << std::fixed << std::setprecision(2) << "\t\t" << tempDev.getName() << " " << tempDev.getPointsEarned() << "/" << tempDev.getPointsTotal() << " - " << (double(tempDev.getPointsEarned())/double(tempDev.getPointsTotal()))*100 << "%" << std::endl;
+                    if(tempDev.getPointsEarned() != -1){
+                        std::cout << std::fixed << std::setprecision(2) << "\t\t" << tempDev.getName() << " " << tempDev.getPointsEarned() << "/" << tempDev.getPointsTotal() << " - " << (double(tempDev.getPointsEarned())/double(tempDev.getPointsTotal()))*100 << "%" << std::endl;
+                    } else {
+                        std::cout << std::fixed << std::setprecision(2) << "\t\t" << tempDev.getName() << " -/" << tempDev.getPointsTotal() << " - -%" << std::endl;
+                    }
                 }
 
             }
@@ -315,7 +331,7 @@ void addDeliverable(Gradebook *gradebook){
                 std::cout << "Process aborted." << std::endl;
             } else if (option >= 0 && option < tempClass->size()){
 
-                std::cout << "Input Deliverable (Name, Points Earned (-1 for blank), Total Points, Type) :";
+                std::cout << "Input Deliverable (Name,PointsEarned(-1 for to be completed),TotalPoints,Type) :";
                 std::cout.flush();
                 std::cin.ignore();
                 std::getline(std::cin, input);

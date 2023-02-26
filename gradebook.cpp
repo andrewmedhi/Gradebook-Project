@@ -43,113 +43,88 @@ Gradebook::Gradebook() {
         std::cout << "Enter file: ";
         std::cin >> fileName;
 
-        std::fstream readfile(fileName);
+        std::fstream file(fileName);
         std::string line;
         std::string currentstudent;
         // Ensure a valid file name
-        while (not (readfile.is_open())){
+        while (not (file.is_open())){
             std::cout << "Could not open file. Please try again. "<< std::endl;
             std::cout << "Enter file: ";
             std::cin >> fileName;
+            file.open(fileName);
+
         }
 
         this->fileName = fileName;
 
-        while (getline(readfile, line)) {
-            std::string s;
-            std::istringstream ss(line);
-            while (getline(ss, s)) {
-                //this if we know it's a student
-                if (s.find('$') != std::string::npos) {
-                    s.erase(remove(s.begin(), s.end(), '$'), s.end());
-                    currentstudent = s;
-                    this->push_student(s);
+        // Hide the stream buffer to prevent the console getting flooded
+
+        std::streambuf* hide_buffer = std::cout.rdbuf();
+        std::cout.rdbuf(nullptr);
+
+
+        while(getline(file, line)){
+
+            if(line[0] == '$'){
+                line = line.substr(1);
+                this->push_student(line);
+
+            } else if(line[0] == '?'){
+                line = line.substr(1);
+                this->students.at(students.size()-1).push_grade(line);
+
+            } else {
+
+                std::vector<std::string> tempInfo;
+
+                std::string tempStr;
+                std::stringstream ss(line);
+
+                while (std::getline(ss, tempStr, ',')) {
+                    tempInfo.push_back(tempStr);
                 }
-                else {
-                    //splits string by space, then adds each item in string into list
-                    std::vector<std::string> deliver_list;
-                    std::istringstream tt(s);
-                    std::string t;
-                    //i decided it would be better to split the string by commas, since an assignment name could have a space
-                    while (getline(tt, t, ',')) {
-                        deliver_list.push_back(t);
-                    }
-                    std::string delivName = deliver_list[0];
-                    int delivPE = std::stoi(deliver_list[1]);
-                    int delivPP = std::stoi(deliver_list[2]);
-                    std::string delivType = deliver_list[3];
-                    Deliverable* tempDeliverable = new Deliverable(delivName,delivType,delivPP,delivPE);
-                    //whatever code is needed to add this deliverable to last person in student list
-                    //students.at(student.size()-1).addDeliverable(tempDeliverable);
-                }
+
+                this->students.at(students.size()-1).getClassList()->at(students.at(students.size()-1).getClassList()->size()-1).push_deliverable(tempInfo.at(0), tempInfo.at(3), std::stoi(tempInfo.at(2)), std::stoi(tempInfo.at(1)));
+
             }
+
+
         }
-        /* Im Assuming the file to look something like this:
+
+        // Re enable the stream so the program actually prints things
+        std::cout.rdbuf(hide_buffer);
+
+
+        /*
+        * The output of the file
         * $Andrew Medeiros
+        * ?CSC212
         * Lab 4,15,20,L
         * Assignment 2,30,50,A
         * $Bill Mates
+        * ?CSC 212
         * Lab 3,12,20,L
         */
-        readfile.close();
+        file.close();
     }
     else {
         //you can change this later ---v
-        std::fstream createfile("gradebook.txt");
-        this->fileName = "gradebook.txt";
 
-        std::string input;
+        std::cout << "Input file name: ";
+        std::cin >> this->fileName;
 
-        //will ask user to enter a student's name until they enter %
-        std::cout << "Please Enter Student Name (Enter '%' To Quit):\n";
-        //std::cin.ignore();
-        std::cin >> input;
-        while (input != "%") {
-            std::string currentstudent = input;
-            this->push_student(currentstudent);
-            currentstudent.insert(0, 1, '$');
-
-            createfile << currentstudent << std::endl;
-            std::string input2;
-            std::cout << "Please Enter A Grade In Format:\nName,Points Earned,Points Worth,Type\n(Enter '%' To Quit):\n";
-            std::cin >> input2;
-            //will ask user to enter a deliverable written in format: Name,Points_earned,Points_worth,Type
-            while (input2 != "%") {
-                //splits string by space, then adds each item in string into list
-                std::vector<std::string> deliver_list;
-                std::istringstream ss(input2);
-                std::string s;
-                while (getline(ss, s, ',')) {
-                    deliver_list.push_back(s);
-                }
-                std::string delivName = deliver_list[0];
-                int delivPE = std::stoi(deliver_list[1]);
-                int delivPP = std::stoi(deliver_list[2]);
-                std::string delivType = deliver_list[3];
-                for (int i = 0; i < deliver_list.size() - 1; i++) {
-                    createfile << deliver_list[i] << ',';
-                }
-                createfile << deliver_list[3] << std::endl;
-                Deliverable* tempDeliverable = new Deliverable(delivName, delivType, delivPP, delivPE);
-                //whatever code is needed to add this deliverable to last person in student list
-                //students.at(student.size()-1).addDeliverable(tempDeliverable);
-                std::cout << "Please Enter A Grade In Format:\nName,Points Earned,Points Worth,Type\n(Enter '%' To Quit):\n";
-                std::cin >> input2;
-
-            }
-            std::cout << "Please Enter Student Name (Enter '%' To Quit):\n";
-            std::cin >> input;
-
-        }
-        createfile.close();
+        std::fstream createfile(this->fileName);
         /*
-        * The output of the file will match how I assume an input file to look
+        * The output of the file
         * $Andrew Medeiros
+        * ?CSC212
         * Lab 4,15,20,L
         * Assignment 2,30,50,A
         * $Bill Mates
+        * ?CSC 212
         * Lab 3,12,20,L
         */
+        createfile.close();
     }
 }
 
@@ -159,7 +134,6 @@ void Gradebook::push_student(std::string studentName) {
     bool studentFound = false;
 
     for(auto & student : students){
-        std::cout << student.getName() << std::endl;
         if(student.getName() == studentName){
             studentFound = true;
             break;
@@ -167,6 +141,7 @@ void Gradebook::push_student(std::string studentName) {
     }
     if(!studentFound){
         students.push_back(*new Person(studentName));
+        std::cout << studentName << " added to gradebook" << std::endl;
     } else {
         std::cout << "Student already exists" << std::endl;
     }
@@ -215,7 +190,6 @@ void Gradebook::saveFile() {
 
             file << "?" << grade.getClassName() << std::endl;
             for(auto deliList : *grade.getDeliverableList()){
-                std::cout << std::endl;
                 double totalPoints = 0;
                 double earnedPoints = 0;
 
