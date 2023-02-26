@@ -17,7 +17,7 @@ public:
     void push_grade(std::string name);
     void pop_grade(std::string name);
 
-
     // getters & setters
     std::string getName();
+    std::vector<Grade>* getClassList();
 };

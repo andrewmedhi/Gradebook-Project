@@ -19,7 +19,6 @@ void Person::push_grade(std::string name) {
 
     if(!gradeExists){
         gradeList.push_back(*new Grade(name));
-        std::cout << "created class " << name << std::endl;
     } else {
         std::cout << "class already exists" << std::endl;
     }
@@ -38,7 +37,6 @@ void Person::pop_grade(std::string name) {
     }
 
     if(gradeRemoved){
-        std::cout << "removed class " << name << std::endl;
     } else {
         std::cout << "class does not exist" << std::endl;
     }
@@ -51,3 +49,6 @@ std::string Person::getName(){
     return this->name;
 }
 
+std::vector<Grade>* Person::getClassList(){
+    return &this->gradeList;
+}

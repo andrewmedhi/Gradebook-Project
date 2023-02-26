@@ -11,22 +11,35 @@ Grade::Grade(std::string className) {
 //push deliverable into the assignment list
 void Grade::push_deliverable(std::string name, std::string type, int pt, int pe) {
 
-    Deliverable tempDeliverable(std::move(name), type, pt, pe);
+    Deliverable tempDeliverable(name, type, pt, pe);
 
     bool successfulPlacement = false;
+    bool nameFound = false;
 
     for(auto & i : deliverableList){ // i is sub list inside of deliverableList
         if(i.at(0).getType() == type){ // if first position in list matches the list, add it
-            i.push_back(tempDeliverable);
-            std::cout << name << " added to " << type << std::endl;
-            successfulPlacement = true; // successful placement, don't create new category
+
+            for(auto & j : i){
+                if(j.getName() == name){
+                    nameFound = true;
+                }
+            }
+
+            if(!nameFound) {
+                i.push_back(tempDeliverable);
+                std::cout << name << " added to " << type << std::endl;
+                successfulPlacement = true; // successful placement, don't create new category
+            }
         }
     }
 
-    if(!successfulPlacement){ // create new category
+    if(!successfulPlacement && !nameFound){ // create new category
         this->deliverableList.push_back(*new std::vector<Deliverable>); // add new category to bottom
         this->deliverableList.at(deliverableList.size()-1).push_back(tempDeliverable); // bottom category has to be new one, push deliverable to it
-        std::cout << "created category " << type << " and added " << name << "to it" << std::endl;
+        std::cout.flush();
+        std::cout << "created category " << type << " and added " << name << " to it" << std::endl;
+    } else {
+        std::cout << "assignment already exists" << std::endl;
     }
 
 }
@@ -69,7 +82,7 @@ void Grade::pop_category(std::string type) {
     if(!successfulRemoval){
         std::cout << "category does not exist" << std::endl;
     } else {
-        std::cout << type << " category removed" << std::endl;
+
     }
 
 }
@@ -94,4 +107,8 @@ std::vector<Deliverable> Grade::getDeliverablesType(std::string type) {
 
     return empty;
 
+}
+
+std::vector<std::vector<Deliverable>> *Grade::getDeliverableList() {
+    return &this->deliverableList;
 }

@@ -15,12 +15,12 @@ Gradebook::Gradebook() {
     while(!correctAnswer) {
         // Take user input
         std::string answer;
-        std::cout << "Would you like to import a file for gradebook? (Y or N) ";
+        std::cout << "Would you like to import a file for gradebook? (Y or N) :";
         std::cin >> answer;
 
         // Uppercase the string
-        for(int i = 0; i < answer.length(); i++){
-            answer[i] = toupper(answer[i]);
+        for(char & i : answer){
+            i = toupper(i);
         }
 
         // Check for valid input
@@ -53,11 +53,13 @@ Gradebook::Gradebook() {
             std::cin >> fileName;
         }
 
+        this->fileName = fileName;
+
         while (getline(readfile, line)) {
             std::string s;
             std::istringstream ss(line);
             while (getline(ss, s)) {
-                //this if if we know it's a student
+                //this if we know it's a student
                 if (s.find('$') != std::string::npos) {
                     s.erase(remove(s.begin(), s.end(), '$'), s.end());
                     currentstudent = s;
@@ -93,7 +95,8 @@ Gradebook::Gradebook() {
     }
     else {
         //you can change this later ---v
-        std::fstream createfile("output.txt");
+        std::fstream createfile("gradebook.txt");
+        this->fileName = "gradebook.txt";
 
         std::string input;
 
@@ -154,15 +157,16 @@ Gradebook::Gradebook() {
 void Gradebook::push_student(std::string studentName) {
 
     bool studentFound = false;
-    for(int i = 0; i < students.size(); i++){
-        if(students.at(i).getName() == studentName){
+
+    for(auto & student : students){
+        std::cout << student.getName() << std::endl;
+        if(student.getName() == studentName){
             studentFound = true;
             break;
         }
     }
-    if(studentFound){
-        students.push_back(*new Person(std::move(studentName)));
-        std::cout << "Created student " << studentName << std::endl;
+    if(!studentFound){
+        students.push_back(*new Person(studentName));
     } else {
         std::cout << "Student already exists" << std::endl;
     }
@@ -181,15 +185,55 @@ void Gradebook::pop_student(std::string studentName) {
         }
     }
 
-    if(studentFound){
-        std::cout << "Deleted student " << studentName << std::endl;
-    } else {
+    if(studentFound == false){
         std::cout << "Student does not exist" << std::endl;
     }
 }
 
 // overwrites the existing save file with the new information
 void Gradebook::saveFile() {
+
+    std::cout << "Saving File." << std::endl;
+
+    std::fstream file(this->fileName, std::ios::out);
+
+    for(int i = 0; i < this->getStudentSize(); i++){
+        Person student = this->getStudentList()->at(i);
+
+        file << "$" << student.getName() << std::endl;
+
+        for(auto grade : *student.getClassList()){
+
+            double totalGradePoints = 0;
+            double earnedGradePoints = 0;
+            for(auto deliList : *grade.getDeliverableList()) {
+                for (auto tempDev: deliList) {
+                    totalGradePoints += tempDev.getPointsTotal();
+                    earnedGradePoints += tempDev.getPointsEarned();
+                }
+            }
+
+            file << "?" << grade.getClassName() << std::endl;
+            for(auto deliList : *grade.getDeliverableList()){
+                std::cout << std::endl;
+                double totalPoints = 0;
+                double earnedPoints = 0;
+
+                for(auto tempDev : deliList){
+                    totalPoints += tempDev.getPointsTotal();
+                    earnedPoints += tempDev.getPointsEarned();
+                }
+
+                for(auto tempDev : deliList){
+                    file << tempDev.getName() << "," << tempDev.getPointsEarned() << "," << tempDev.getPointsTotal() << "," << tempDev.getType() << std::endl;
+                }
+
+            }
+        }
+    }
+
+    std::cout << "File Saved!" << std::endl;
+
 
 }
 
@@ -200,14 +244,9 @@ void Gradebook::readFile() {
 
 // GETTERS & SETTERS
 
-Person Gradebook::getStudent(std::string Name) { // TODO: THIS
 
-}
-
-
-
-std::vector<Person> Gradebook::getStudentList() {
-    return this->students;
+std::vector<Person>* Gradebook::getStudentList() {
+    return &this->students;
 }
 
 int Gradebook::getStudentSize() {

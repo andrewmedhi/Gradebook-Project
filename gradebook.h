@@ -3,6 +3,7 @@
 class Gradebook{
 private:
     std::vector<Person> students;
+    std::string fileName;
 
 public:
     Gradebook(); // constructor
@@ -13,9 +14,8 @@ public:
     void saveFile();
     void readFile();
 
-    Person getStudent(std::string Name);
     int getStudentSize();
-    std::vector<Person> getStudentList();
+    std::vector<Person>* getStudentList();
 
 
 

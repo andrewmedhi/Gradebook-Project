@@ -17,7 +17,7 @@ std::string Deliverable::getName(){
     return this->name;
 }
 
-int Deliverable::getPointsWorth() {
+int Deliverable::getPointsTotal() {
     return this->pointTotal;
 }
 

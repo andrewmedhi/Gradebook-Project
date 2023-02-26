@@ -18,6 +18,7 @@ public:
     // getters & setters
     std::string getClassName();
     std::vector<Deliverable> getDeliverablesType(std::string type);
+    std::vector<std::vector<Deliverable>>* getDeliverableList();
 
 
 

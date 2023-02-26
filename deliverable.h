@@ -13,7 +13,7 @@ public:
 
     // getters & setters
     std::string getName();
-    int getPointsWorth();
+    int getPointsTotal();
     int getPointsEarned();
     std::string getType();
 
