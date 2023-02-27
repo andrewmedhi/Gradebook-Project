@@ -38,8 +38,8 @@ void Grade::push_deliverable(std::string name, std::string type, int pt, int pe)
         this->deliverableList.at(deliverableList.size()-1).push_back(tempDeliverable); // bottom category has to be new one, push deliverable to it
         std::cout.flush();
         std::cout << "created category " << type << " and added " << name << " to it" << std::endl;
-    } else {
-        std::cout << "assignment already exists" << std::endl;
+    } else if(nameFound) {
+        std::cout << "deliverable already exists" << std::endl;
     }
 
 }

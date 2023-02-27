@@ -229,7 +229,7 @@ void addClass(Gradebook *gradebook){
 
         gradebook->getStudentList()->at(option).push_grade(className);
 
-        std::cout << student.getName() << " added to " << className << std::endl;
+        //std::cout << student.getName() << " added to " << className << std::endl;
     } else {
         std::cout << "Please chose valid input" << std::endl;
     }
@@ -278,7 +278,7 @@ void removeClass(Gradebook *gradebook){
 
                 tempStudent->pop_grade(className);
 
-                std::cout << tempStudent->getName() << " removed from " << className << std::endl;
+                //std::cout << tempStudent->getName() << " removed from " << className << std::endl;
             } else {
                 std::cout << "Please chose valid input" << std::endl;
             }
@@ -559,7 +559,7 @@ void mainMenu(Gradebook *gradebook){
             std::cout << std::endl;
             editMenu(gradebook);
 
-        } else {
+        } else if (option != "-1"){
             std::cout << std::endl;
             std::cout << "Please input a valid option" << std::endl;
             std::cout << std::endl;

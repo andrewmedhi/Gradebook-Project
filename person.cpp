@@ -19,6 +19,7 @@ void Person::push_grade(std::string name) {
 
     if(!gradeExists){
         gradeList.push_back(*new Grade(name));
+        std::cout << name<< " added to " << this->name << std::endl;
     } else {
         std::cout << "class already exists" << std::endl;
     }
@@ -37,6 +38,7 @@ void Person::pop_grade(std::string name) {
     }
 
     if(gradeRemoved){
+        std::cout << name << " removed from " << this->name << std::endl;
     } else {
         std::cout << "class does not exist" << std::endl;
     }
