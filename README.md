@@ -8,7 +8,7 @@ Annie Liang
 <br>
 Alex Cote and 
 <br>
-Andrew Medhi
+Andrew Medeiros
 
 ## SUMMARY
 
