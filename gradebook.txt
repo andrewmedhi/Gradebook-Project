@@ -64,7 +64,7 @@ Balancing Act,3,5,Lab
 Hash Tables,5,5,Lab
 Sets & Maps,5,5,Lab
 Graphs,5,5,Lab
-$Andrew Medhi
+$Andrew Medeiros
 ?CSC212
 Assignment 1,85,100,Assignments
 Assignment 2,100,100,Assignments
