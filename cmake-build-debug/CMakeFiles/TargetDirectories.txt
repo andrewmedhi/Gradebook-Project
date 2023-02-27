@@ -1,3 +1,0 @@
-C:/Users/aidan/CLionProjects/Gradebook-Project/cmake-build-debug/CMakeFiles/Gradebook-Project.dir
-C:/Users/aidan/CLionProjects/Gradebook-Project/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/aidan/CLionProjects/Gradebook-Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,7 +1,0 @@
-$Annie Liang
-?CSC212
-$Alex Cote
-$Andrew Medhi
-$Aidan Languedoc
-?CSC212
-Introduction to C++,89,100,Assignment of the week
