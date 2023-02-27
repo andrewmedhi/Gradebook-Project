@@ -316,13 +316,13 @@ student `Annie Liang` features a filled out deliverable list as of `Feb 27 2023`
 student `Alex Cote` and `Andrew Medhi` feature a mix of both
 <br>
 
-![Image](images/gradebook_1.png)
+![Image](images/gradebook1.png)
 <br>
-![Image](images/gradebook_2.png)
+![Image](images/gradebook2.png)
 <br>
-![Image](images/gradebook_3.png)
+![Image](images/gradebook3.png)
 <br>
-![Image](images/gradebook_4.png)
+![Image](images/gradebook4.png)
 
 *all deliverables grades are made up and do not reflect any actual grade of corresponding student*
 
