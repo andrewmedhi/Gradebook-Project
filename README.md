@@ -103,7 +103,9 @@ The file is composed of two individual symbols to mark a new `person`, `grade`, 
    <br>
    <img src=images/compilation1.png width="50%" height="50%">
 3. Run program.
-
+<br>
+NOTE: if files are not being imported on startup/can not be found, put them in `cmake-build-debug`
+<br>
 ## RUNTIME INSTRUCTIONS
 
 `Inital Setup`
