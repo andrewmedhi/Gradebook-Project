@@ -347,6 +347,6 @@ The sample input created through the runtime tutorial with additional students a
 Following the steps should result in similar output.
 <br>
 
-![Image](images/runtime_12.png)
+![Image](images/runtime12.png)
 
 *all deliverables grades are made up and do not reflect any actual grade of the corresponding student*
